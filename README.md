@@ -35,25 +35,30 @@ limitations under the License.
 
 > Test if a value is a number having a safe integer value.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-is-safe-integer
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import isSafeInteger from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/assert-is-safe-integer/tags). For example,
-
-```javascript
-import isSafeInteger from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@v0.1.0-deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { isObject, isPrimitive } from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@deno/mod.js';
+var isSafeInteger = require( '@stdlib/assert-is-safe-integer' );
 ```
 
 #### isSafeInteger( value )
@@ -63,7 +68,7 @@ Tests if a value is a `number` having a safe `integer` value.
 <!-- eslint-disable no-new-wrappers -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isSafeInteger( 5.0 );
 // returns true
@@ -88,7 +93,7 @@ Tests if a `value` is a primitive `number` having a safe `integer` value.
 <!-- eslint-disable no-new-wrappers -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isSafeInteger.isPrimitive( -3.0 );
 // returns true
@@ -104,7 +109,7 @@ Tests if a `value` is a `Number` object having a safe `integer` value.
 <!-- eslint-disable no-new-wrappers -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isSafeInteger.isObject( 3.0 );
 // returns false
@@ -124,7 +129,7 @@ bool = isSafeInteger.isObject( new Number( 3.0 ) );
 -   An integer valued number is "safe" when the number can be exactly represented as a [double-precision floating-point number][ieee754]. For example,
 
     ```javascript
-    import MAX_SAFE_INTEGER from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-max-safe-integer@deno/mod.js';
+    var MAX_SAFE_INTEGER = require( '@stdlib/constants-float64-max-safe-integer' );
     // returns 9007199254740991
 
     var x = 9007199254740992;
@@ -152,8 +157,8 @@ bool = isSafeInteger.isObject( new Number( 3.0 ) );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
-import isSafeInteger from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@deno/mod.js';
+var Number = require( '@stdlib/number-ctor' );
+var isSafeInteger = require( '@stdlib/assert-is-safe-integer' );
 
 var bool = isSafeInteger( -5.0 );
 // returns true
@@ -214,7 +219,7 @@ bool = isSafeInteger( null );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -244,8 +249,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-safe-integer.svg
 [npm-url]: https://npmjs.org/package/@stdlib/assert-is-safe-integer
 
-[test-image]: https://github.com/stdlib-js/assert-is-safe-integer/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/assert-is-safe-integer/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/assert-is-safe-integer/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/assert-is-safe-integer/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/assert-is-safe-integer/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/assert-is-safe-integer?branch=main
@@ -278,9 +283,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/assert/is-integer]: https://github.com/stdlib-js/assert-is-integer/tree/deno
+[@stdlib/assert/is-integer]: https://github.com/stdlib-js/assert-is-integer
 
-[@stdlib/assert/is-number]: https://github.com/stdlib-js/assert-is-number/tree/deno
+[@stdlib/assert/is-number]: https://github.com/stdlib-js/assert-is-number
 
 <!-- </related-links> -->
 

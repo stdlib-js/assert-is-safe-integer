@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isSafeInteger from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@deno/mod.js';
+import isSafeInteger from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@v0.2.2-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { isObject, isPrimitive } from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@deno/mod.js';
+import { isObject, isPrimitive } from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@v0.2.2-deno/mod.js';
 ```
 
 #### isSafeInteger( value )
@@ -148,7 +148,7 @@ bool = isSafeInteger.isObject( new Number( 3.0 ) );
 
 ```javascript
 import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
-import isSafeInteger from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@deno/mod.js';
+import isSafeInteger from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer@v0.2.2-deno/mod.js';
 
 var bool = isSafeInteger( -5.0 );
 // returns true
